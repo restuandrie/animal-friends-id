@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header"; // Impor Header
 import Footer from "@/components/Footer"; // Impor Footer
+import { Toaster } from 'react-hot-toast'; // Impor Toaster
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Toaster position="top-center" /> {/* Tambahkan komponen Toaster */}
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-grow container mx-auto px-6 py-8">

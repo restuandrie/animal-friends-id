@@ -20,3 +20,12 @@ export interface Pet {
   isFeatured: boolean;
   description: TypedObject[]; // Menggunakan tipe langsung dari library
 }
+
+export interface CartItem {
+  _id: string;
+  name: string;
+  price: number;
+  slug: string;
+  image: SanityImage;
+  quantity: number;
+}
