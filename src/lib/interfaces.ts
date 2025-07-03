@@ -1,4 +1,6 @@
 // src/lib/interfaces.ts
+import type { TypedObject } from '@portabletext/types'
+
 export interface SanityImage {
   _type: 'image';
   asset: {
@@ -14,6 +16,7 @@ export interface Pet {
     current: string;
   };
   price: number;
-  images: SanityImage[]; // Menggunakan tipe yang lebih spesifik
+  images: SanityImage[];
   isFeatured: boolean;
+  description: TypedObject[]; // Menggunakan tipe langsung dari library
 }
